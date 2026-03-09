@@ -24,4 +24,15 @@ export class TodoItemComponent implements OnInit{
     this.txtInput = new FormControl( this.todo.texto, Validators.required );
   }
 
+  editar(){
+    this.editando = true;
+    setTimeout(() => {
+      this.txtInputFisico.nativeElement.select();
+    }, 1);
+  }
+
+  terminarEdicion(){
+    this.editando = false;
+  }
+
 }

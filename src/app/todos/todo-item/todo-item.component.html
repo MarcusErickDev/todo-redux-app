@@ -7,12 +7,13 @@
         type="checkbox"
         [formControl]="chkCompletado"
       >
-      <label (dblclick)="editando = true">{{ todo.texto }}</label>
+      <label (dblclick)="editar()">{{ todo.texto }}</label>
       <button class="destroy"></button>
     </div>
     <input
       type="text"
       class="edit"
       [formControl]="txtInput"
+      (blur)="terminarEdicion()"
       #inputFisico>
   </li>
