@@ -24,3 +24,8 @@ export const borrar = createAction(
   '[TODO] borrar todo',
   props<{ id: number }>()
 );
+
+export const limpiar = createAction(
+  '[TODO] limpiar todo',
+  // props<{ completado: boolean }>()
+);
